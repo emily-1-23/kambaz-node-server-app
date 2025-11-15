@@ -23,7 +23,7 @@ export default function CourseRoutes(app, db) {
       const currentUser = req.session["currentUser"];
       if (!currentUser) {
         res.sendStatus(401);
-        return;
+        return; 
       }
       userId = currentUser._id;
     }
