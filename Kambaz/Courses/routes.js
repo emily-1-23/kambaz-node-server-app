@@ -21,7 +21,7 @@ export default function CourseRoutes(app) {
     const courses = await enrollmentsDao.findCoursesForUser(userId);
     res.json(courses);
   };
-  const enrollmentsDao = EnrollmentsDao(db);
+  const enrollmentsDao = EnrollmentsDao();
 
   const createCourse = async (req, res) => {
     const currentUser = req.session["currentUser"];
